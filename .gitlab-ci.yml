@@ -1,0 +1,6 @@
+stages:
+  - echoPrintDeneme
+print-text-job:
+  stage: echoPrintDeneme
+  script:
+    - echo "Deneme 123"
