@@ -12,7 +12,7 @@ jobs:
     name: Scan
     runs-on: ubuntu-latest
     container:
-      image: returntocorp/semgrep-action@fcd5ab7459e8d91cb1777481980d1b18b4fc6735
+      image: returntocorp/semgrep
     steps:
       - name: FetchSource
         uses: actions/checkout@v4
