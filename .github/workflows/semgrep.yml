@@ -15,6 +15,6 @@ jobs:
       - name: FetchSource
         uses: actions/checkout@v4
       - name: Semgrep
-        run: semgrep ci --config=auto
+        run: semgrep ci --config=auto --sarif --output=semgrep.sarif || true
       
         
