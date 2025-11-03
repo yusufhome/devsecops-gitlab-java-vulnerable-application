@@ -17,10 +17,7 @@ jobs:
       - name: FetchSource
         uses: actions/checkout@v4
       - name: Semgrep
-        with:
-          generateSarif: "1"
-
-      # Upload SARIF file generated in previous step
+        run: semgrep ci --config=auto --sarif --output=semgrep.sarif || true
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
